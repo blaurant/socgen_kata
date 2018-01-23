@@ -1,0 +1,1504 @@
+{
+  "className": "supermarket.application.ShoppingTest",
+  "name": "Shopping",
+  "scenarios": [
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_multiple_goods",
+      "description": "total for multiple goods",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 10261016
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 353950
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "chocolate at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "chocolate at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2293048
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 3430761
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "1.65",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1.65"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 99781235
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 350035055
+        }
+      ],
+      "durationInNanos": 350035055,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_goods_by_weight_with_unit_conversion",
+      "description": "total for goods by weight with unit conversion",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 854540
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "4 OUNCE",
+                  "argumentInfo": {
+                    "argumentName": "weightQuantity",
+                    "formattedValue": "4 OUNCE"
+                  }
+                },
+                {
+                  "value": "pudding at price $Amount(1.99)/POUND",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "pudding at price $Amount(1.99)/POUND"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 9866802
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 3400819
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "0.50",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "0.50"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 837398
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 19334567
+        }
+      ],
+      "durationInNanos": 19334567,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_goods_with_discount_by_lot",
+      "description": "total for goods with discount by lot",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 238554
+            },
+            {
+              "name": "a discount on good",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "a discount on good"
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                },
+                {
+                  "value": "(3 for $1/unit)",
+                  "argumentInfo": {
+                    "argumentName": "discount",
+                    "formattedValue": "(3 for $1/unit)"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 17561435
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "3",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "3"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 234008
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1043945
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "1.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1049065
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 69743
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 431500
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "1.65",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1.65"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 697528
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 66296
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 428046
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "2.30",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "2.30"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 670372
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 47884982
+        }
+      ],
+      "durationInNanos": 47884982,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "empty_cart",
+      "description": "empty cart",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2488637
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 12547835
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "0",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "0"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1569816
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 36422246
+        }
+      ],
+      "durationInNanos": 36422246,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_goods_with_discount_one_for_free",
+      "description": "total for goods with discount one for free",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 85116
+            },
+            {
+              "name": "a discount on good",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "a discount on good"
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                },
+                {
+                  "value": "(buy 2 get one free)",
+                  "argumentInfo": {
+                    "argumentName": "discount",
+                    "formattedValue": "(buy 2 get one free)"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 14571175
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 163260
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 699841
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "1.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1116507
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 46751
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 277329
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "2.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "2.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 559925
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 50666
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 329065
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "2.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "2.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 661437
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 53129
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 337612
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "3.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "3.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 659137
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 109584
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 726645
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "4.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "4.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1270316
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $1/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $1/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 127789
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 753591
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "4.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "4.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 923480
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 41374350
+        }
+      ],
+      "durationInNanos": 41374350,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_one_good",
+      "description": "total for one good",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 280939
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 54613
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 229520
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "0.65",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "0.65"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 582948
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 2637871
+        }
+      ],
+      "durationInNanos": 2637871,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_goods_by_weight_and_by_unit",
+      "description": "total for goods by weight and by unit",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 199213
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1 POUND",
+                  "argumentInfo": {
+                    "argumentName": "weightQuantity",
+                    "formattedValue": "1 POUND"
+                  }
+                },
+                {
+                  "value": "pudding at price $Amount(10)/POUND",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "pudding at price $Amount(10)/POUND"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 62637
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1 POUND",
+                  "argumentInfo": {
+                    "argumentName": "weightQuantity",
+                    "formattedValue": "1 POUND"
+                  }
+                },
+                {
+                  "value": "pudding at price $Amount(10)/POUND",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "pudding at price $Amount(10)/POUND"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 50131
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "2",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "2"
+                  }
+                },
+                {
+                  "value": "chocolate at price $2/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "chocolate at price $2/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 62632
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "2",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "2"
+                  }
+                },
+                {
+                  "value": "chocolate at price $2/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "chocolate at price $2/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 699193
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 228035
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "28.00",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "28.00"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4938464
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 12148854
+        }
+      ],
+      "durationInNanos": 12148854,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_goods_by_weight",
+      "description": "total for goods by weight",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 330264
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "4 POUND",
+                  "argumentInfo": {
+                    "argumentName": "weightQuantity",
+                    "formattedValue": "4 POUND"
+                  }
+                },
+                {
+                  "value": "pudding at price $Amount(1.99)/POUND",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "pudding at price $Amount(1.99)/POUND"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1265228
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 406494
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "7.96",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "7.96"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1682341
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 7151298
+        }
+      ],
+      "durationInNanos": 7151298,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "supermarket.application.ShoppingTest",
+      "testMethodName": "total_for_two_time_the_same_good",
+      "description": "total for two time the same good",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "an empty cart",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "an empty cart"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 584069
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 103376
+            },
+            {
+              "name": "add",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "add"
+                },
+                {
+                  "value": "2",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "2"
+                  }
+                },
+                {
+                  "value": "can of beans at price $0.65/unit",
+                  "argumentInfo": {
+                    "argumentName": "good",
+                    "formattedValue": "can of beans at price $0.65/unit"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 146972
+            },
+            {
+              "name": "calculate total",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate total"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 404226
+            },
+            {
+              "name": "result is",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "result is"
+                },
+                {
+                  "value": "1.95",
+                  "argumentInfo": {
+                    "argumentName": "number",
+                    "formattedValue": "1.95"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1143677
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 7212629
+        }
+      ],
+      "durationInNanos": 7212629,
+      "executionStatus": "SUCCESS"
+    }
+  ],
+  "tagMap": {}
+}
